@@ -37,14 +37,8 @@ public class Trojuhelnik {
 
     public Boolean realnostTrojuhelniku() {
         boolean nevim = true;
-        if (stranaA + stranaB >= stranaC)
+        if (stranaA + stranaB >= stranaC && stranaA + stranaC >= stranaB && stranaB + stranaC >= stranaA)
             return nevim == true;
-        else if (stranaA + stranaC >= stranaB) {
-            return nevim = true;
-        }
-        else if (stranaB + stranaC >= stranaA) {
-            return nevim = true;
-        }
         else
             return nevim == false;
     }
@@ -53,10 +47,8 @@ public class Trojuhelnik {
         if (realnostTrojuhelniku() == true) {
             return "Trojuhelník lze složit";
         }
-        else if(realnostTrojuhelniku()==false)
+        else
             return "Trojuhelník nelze složit";
-        else return null;
-
     }
 
     public String urceniTrojuhelniku(){
